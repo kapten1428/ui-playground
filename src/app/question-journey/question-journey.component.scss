@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+$defaultColor   : #FE9672;
+$softOrange     : #F7AF6A;
+$softPink       : #EC888B;
+$mainOrange     : #FFAC47;
+$defaulWhite    : #FEFEFD;
+
+$border-default: 10px;
+
+#card__overly {
+    height: 100%;
+    width: 100%;
+    background-color: $defaultColor;    
+
+    font-family: 'Lato', sans-serif;
+}
+
+%center {
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.container {
+
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 46%;
+    height: max-content;
+
+    border-radius: $border-default;
+    background-color: $defaulWhite;
+
+    &__card {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+}
+
+.card {
+    &__content {
+        position: relative;
+        margin: 10px;
+
+        width: 200px;
+        height: 200px;
+        border-radius: $border-default;
+        background-color: $mainOrange;
+
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover .card__text {
+            height: 100%;
+        }
+
+        &:hover label {
+            display: none;
+        }
+        
+        label {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 12px;
+            text-align: center;
+            opacity: .2;
+            z-index: 2;
+        }
+    }
+
+    &__icon {
+        @extend %center;
+
+        position: absolute;
+        width: 120px;
+        padding: 10px;
+
+        background-color: $defaulWhite;
+        border-radius: 10px;
+
+        text-align: center;
+
+        img{
+            width: 100px;
+        }
+
+       
+    }
+
+    &__text {
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        
+        background-color: $defaultColor;
+        transition: .5s ease-in;
+
+        color: $defaulWhite;
+        
+        font-weight: 600;
+        font-size: 30px;
+
+        text-align: center;
+        line-height: 200px;
+
+    }
+
+    
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        &__card {
+            justify-content: center;
+        }
+    
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1310px)  {
+  
+    .container {
+        &__card {
+            width: 100%;
+            justify-content: center;
+        }
+    
+    }
+    
+  }

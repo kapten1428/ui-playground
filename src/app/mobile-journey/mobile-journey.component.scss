@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+$defaultColor: #F6C284;
+$softOrange: #f7af6a;
+$softPink: #ec888b;
+$mainOrange: #F8A648;
+$defaulWhite: #fefefd;
+
+#card__overly {
+	background: $defaultColor;
+	width: 100%;
+    min-height: 100%;
+
+    font-family: 'Lato', sans-serif;
+}
+
+
+.container {
+    position: relative;
+    
+    width: 95%;
+    margin: 0 auto;
+
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.card {
+    &__content {
+        position: relative;
+        margin: 10px;
+
+        width: 100%;
+        min-height: 150px;
+        border-radius: 10px;
+        background: $defaulWhite;
+        
+        text-align: center;
+
+        overflow: hidden;
+        cursor: pointer;
+
+        label {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 10px;
+        }
+
+        &:hover .card__text{
+            height: 100%;
+        }
+    }
+    &__icon {
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%);
+
+        text-align: center;
+        img {
+            width: 100px;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+
+        color: $defaulWhite;
+        font-size: 3rem;
+        font-weight: 600;
+
+        background-color: $mainOrange;
+
+        z-index: 1;
+        transition: .5s ease-in-out;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        &__card {
+            justify-content: center;
+        }
+    }
+  
+    .card {
+        &__content {
+            width: 200px;
+            height: 200px;
+    
+        }
+        &__icon {
+            top:20%;
+        }
+    
+    }
+    
+}
+
+@media (max-width: 768px) and (min-width: 520px) {
+
+    .card {
+        &__content {
+            width: 45%;
+        }
+    
+    }
+}
+
+@media (min-width: 1025px)  {
+    .container {
+        &__card {
+            flex-wrap: nowrap;
+        }
+    }
+    
+}
+
+.text__center {
+    position: relative;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+
+    max-height: 100%;
+}
