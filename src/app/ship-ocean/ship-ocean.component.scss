@@ -1,0 +1,165 @@
+$morning    :  #E8F7F8;
+$day        :  #fbfae9;
+$midDay     : #ffe5a7;
+$afternoon  : #DBB97B;
+$night      : #031826;
+$oceanWater : #B4EAF4;
+$sementTop  :  #B1BEC6;
+$sement     :  #92A4AE;
+
+#ship__ocean {
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+
+    background-color: $morning;
+
+    overflow: hidden;
+    animation: dayTransition 5s linear infinite;
+}
+
+.sun {
+    img {
+        position: absolute;
+        top: 50%;
+
+        width: 65px;
+        animation: sunTransition 5s ease-out infinite;
+    }
+}
+
+
+.ship__container {
+    img {
+        position: absolute;
+        width: 150px;
+        top: 35%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        animation: sailing 6s linear infinite ;
+    }
+}
+
+.corner__stone {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-end;
+
+    .stone{
+        &__block {
+            width: 25%;
+            height: 30%;
+            background-color: $sement ;
+
+            z-index: 1;
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 25%;
+
+                background: $sementTop;
+            }
+        }
+    }
+}
+
+.ocean__water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    background: $oceanWater;
+
+    animation: oceanTransition 5s linear infinite ;
+}
+
+
+@keyframes sailing {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+@keyframes dayTransition {
+    0%{
+        background-color: $morning;
+    }
+    40% {
+        background-color: $day;
+    }
+    60%{
+        background-color: $midDay;
+    }
+    80% {
+        background-color: $afternoon;
+    }
+    100% {
+        background-color: darken($night, 80%);
+    }
+}
+
+@keyframes oceanTransition {
+    0%{
+        background-color: $oceanWater;
+    }
+    40% {
+        background-color: darken($day, 10%);
+    }
+    60%{
+        background-color: darken($midDay, 10%);
+    }
+    80% {
+        background-color: darken($afternoon, 10%);
+    }
+    100% {
+        background-color: $night;
+        
+    }
+}
+
+
+@keyframes sunTransition {
+    0%{
+        top: 45%;
+        left: 0%;
+    }
+    40% {
+        top: 15%;
+        left: 25%;
+    }
+    60% {
+        top: 10%;
+        left: 40%;
+        opacity: .8;
+    }
+    80% {
+        top: 15%;
+        left: 65%;
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+        top: 45%;
+        left: 100%
+    }
+}
+
+@media only screen and (max-width: 450px) {s
+    #ship__ocean {
+        width: 375px;
+        height: 375px;
+    }
+}
+/*-----------------
+ship_icon by https://www.flaticon.com/
+*/

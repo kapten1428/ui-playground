@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { QuestionJourneyComponent } from './question-journey/question-journey.component';
 import { MobileJourneyComponent } from './mobile-journey/mobile-journey.component';
+import { ShipOceanComponent } from './ship-ocean/ship-ocean.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'm-question-journey',
     component: MobileJourneyComponent
+  },
+  {
+    path: 'ship-ocean',
+    component: ShipOceanComponent
   }
 ];
 
