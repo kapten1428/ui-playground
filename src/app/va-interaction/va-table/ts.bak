@@ -1,0 +1,163 @@
+import { Component, OnInit, ElementRef, AfterViewChecked } from '@angular/core';
+
+@Component({
+  selector: 'app-va-interaction',
+  templateUrl: './va-interaction.component.html',
+  styleUrls: ['./va-interaction.component.scss']
+})
+export class VaInteractionComponent implements OnInit {
+
+  constructor(
+    private _elref: ElementRef
+  ) { }
+
+  ngOnInit() {
+    // this.addItemEventListener();
+  }
+
+  // sendItemToDestination(destination) {
+  //   let selectedDestination = document.querySelector(`input[type="checkbox"] li input`);
+  //   // selectedDestination.addEventListener('click', this.selectedItemEventListener.bind(destination));
+
+  // }
+
+  addItemEventListener() {
+    // console.log(destination);
+    // const a = this._elref.nativeElement.querySelectorAll('.va__list-group li input');
+    const a = this._elref.nativeElement.querySelectorAll('.va__list-group');
+    
+    a.forEach(el => {
+      el.addEventListener('click', (e) => {
+        
+        console.log(el.id);
+        // console.log(e.target.parentElement.parentElement.id);
+        // // this.selectedItem(e.target.parentElement.parentElement.id);
+        this.vaSelected(el.id);
+      })
+    })
+    
+
+  // }
+
+  // ngAfterViewChecked() {
+    
+  }
+
+  selectedItem(itemName) {
+    let selectInputs = this._elref.nativeElement.querySelectorAll(`input[type="checkbox"]`);
+    let selectCheckedInput = this._elref.nativeElement.querySelectorAll(`input[type="checkbox"]:checked`);
+
+    // console.log(selectCheckedInput);
+    selectInputs.forEach(_input => {
+      console.log(itemName);
+      if(selectCheckedInput.length > 0) {
+       _input.name === itemName ? _input.disabled = false : _input.disabled = true;
+      //  _input.name === itemName ? _input.disabled = false : _input.disabled = true;
+      } else {
+        // return _input.name === itemName ? true : _input.disabled = false;
+        // _input.disabled = false;
+        _input.name === itemName ? _input.disabled = false : _input.disabled = true;
+      }
+    });
+  }
+
+
+
+  // vaSelected(itemName) {
+  //   // console.log(itemName);
+  //   let prt = document.querySelector(`#${itemName} input[type="checkbox"]`);
+  //   prt.addEventListener('click', this.vaSelecteda.bind(itemName));
+    
+
+  // }
+
+  // vaSelecteda(itemName) {
+    
+  //   let a = document.querySelectorAll(`input[type="checkbox"]`);
+  //   let b = document.querySelectorAll(`input[type="checkbox"]:checked`);
+  //   let c = document.querySelectorAll(`input[type="radio"]`);
+
+  //   // document.getElementById(itemName).classList.add('active');
+  //   // c.forEach(el => {
+      
+  //   //   if(el.dataset.name === itemName) {
+  //   //       el.classList.add('active');
+  //   //   } else {
+  //   //     el.classList.add('disable');
+  //   //   }
+  //   // });
+    
+    
+
+    
+  //   // a.forEach((item) => {
+  //   //   if(b.length > 0) {
+        
+  //   //     return item.name === itemName ? true : item.disabled = true;
+  //   //     return item.name === itemName ? true : item.checked = false;
+  //   //   } else {
+  //   //     return item.name === itemName ? true : item.disabled = false;
+  //   //   }
+      
+  //   // })
+  // }
+  vaSelected(itemName) {
+// console.log(itemName);
+    let a = this._elref.nativeElement.querySelectorAll(`input[type="checkbox"]`);
+    let b = this._elref.nativeElement.querySelectorAll(`input[type="checkbox"]:checked`);
+    // let c = this._elref.nativeElement.querySelectorAll(`input[type="radio"]`);
+    let c = this._elref.nativeElement.querySelectorAll(`.va__list`);
+
+    document.getElementById(itemName).classList.remove('disabled');
+    c.forEach(el => {
+
+      console.log(b.length);
+      
+      if(el.id === itemName) {
+        el.classList.add('active');
+      } else {
+        el.classList.add('disabled');
+      }
+
+      if(b.length > 0) {
+        
+        // alert();
+      } else {
+          el.classList.remove('disabled');
+      }
+      // if(!el.classList.contains('active')) {
+      //   el.classList.add('disabled');
+      // } else {
+      //   el.classList.add('active');
+      //   el.classList.remove('disabled');
+        
+      // }
+      // if(b.length > 0) {
+      //   if(el.dataset.name === itemName) {
+      //     el.classList.add('active');
+      // } else {
+      //   el.classList.add('disable');
+      // }
+      // } else {
+      //   el.removeAttribute('class');
+      // }
+
+      
+    });
+    
+    // console.log(itemName);
+
+    
+    a.forEach((item) => {
+      if(b.length > 0) {
+        console.log(item);
+        return item.name === itemName ? true : item.disabled = true;
+        return item.name === itemName ? true : item.checked = false;
+      } else {
+        document.getElementById(itemName).classList.remove('active');
+        return item.name === itemName ? true : item.disabled = false;
+      }
+      
+    })
+  }
+}

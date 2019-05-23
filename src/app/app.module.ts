@@ -7,6 +7,7 @@ import { QuestionJourneyComponent } from './question-journey/question-journey.co
 import { MobileJourneyComponent } from './mobile-journey/mobile-journey.component';
 import { ShipOceanComponent } from './ship-ocean/ship-ocean.component';
 import { FashionChooseComponent } from './fashion-choose/fashion-choose.component';
+import { VaInteractionComponent } from './va-interaction/va-interaction.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FashionChooseComponent } from './fashion-choose/fashion-choose.componen
     QuestionJourneyComponent,
     MobileJourneyComponent,
     ShipOceanComponent,
-    FashionChooseComponent
+    FashionChooseComponent,
+    VaInteractionComponent
   ],
   imports: [
     BrowserModule,

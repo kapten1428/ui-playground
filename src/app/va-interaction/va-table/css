@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+// 
+
+/*-------------------------------------*/
+$defaultFontColor : #3B4A58;
+$defaultPeach: rgb(226, 135, 127);
+$defaultWhite: #ffffff;
+$defaultBlue: #396EAB;
+$blueDarkDefault : #3EA6CC;
+$blueLightDefault: #7BC0D5;
+$borderRadiusBase : 8px;
+
+$gray : #6c7a89;
+$grayDarker: #22313f;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type=radio]:checked + label .la{
+
+    width: 100%;
+    height: 20px;
+    background: #f00;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+
+    label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 600px;
+    padding: 1rem;
+    border-radius: $borderRadiusBase;
+    background-image: linear-gradient(to right, $blueDarkDefault, $blueLightDefault);
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.va__list {
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 20px;
+    background: $defaultWhite;
+
+    &-header{
+        .title {
+            padding-bottom: .3rem;
+            border-bottom: 1px solid $blueDarkDefault;
+           
+            span {
+                background: $blueLightDefault;
+                padding: 10px;
+                padding-bottom: 5px;
+                border-radius: 8px 25px 0 0;
+
+                color: $defaultWhite;
+            }
+        }
+    }
+
+    &.disabled {
+        background-color: rgb(222, 222, 222);
+
+        .title {
+            border-bottom: 1px solid #ccc;
+            span{
+                background-color: #9ab2b9;;
+            }
+        }
+
+        .va-act {
+            button {
+                background: #9ab2b9;
+                &:hover{
+                    background-color: #9ab2b9;
+                }
+            }
+
+            
+        }
+    }
+
+    &-group {
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+            input[type="checkbox"] {
+                
+                &:not(:checked) + label,
+                &:checked + label {
+                   position: relative;
+                   cursor: pointer;
+                   padding-left: 35px;
+                   padding-top: 2px;
+                }
+                &:not(:checked) + label:before,
+                &:checked + label:before{
+                   content: "";
+                   position: absolute;
+                   width: 23px;
+                   height: 23px;
+                   left: 0;
+                   top: -1px;
+                   background: $gray;
+                }
+                &:checked + label:before{
+                   background: $grayDarker;
+                }
+                &:not(:checked) + label:after,
+                &:checked + label:after {
+                   content: "✔";
+                   font-family: "Ionicons";
+                   display: inline-block;
+                   position: absolute;
+                   left: 6px;
+                   transition: all 0.2s ease-out;
+                   line-height: 1.3rem;
+                }
+                &:not(:checked) + label:after {
+                   color: transparent;
+                   transform: scale(0);
+                }
+                &:checked + label:after {
+                   color: #000;
+                   transform: scale(1);
+                   color: #fff;
+                }
+                &:disabled + label:before{
+                    background: #ccc;
+                }
+             }
+        }
+    }
+
+    .va-act {
+        padding-top: .6rem;
+        text-align: right;
+
+        button {
+            cursor: pointer;
+
+            background: $blueDarkDefault;
+            border: 1px solid transparent;
+            padding: 8px 0;
+            min-width: 100px;
+            border-radius: 4px;
+            color: $defaultWhite;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover{
+                background-color: darken($blueDarkDefault, 15%);
+            }
+        }
+    }
+
+    
+}
+
+.indicator_status {
+    border-radius: 15px;
+    padding: 5px;
+    min-width: 4rem;
+    background: #6AC7C6;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+  
+    .container {
+        width: inherit;
+    }
+    
+}

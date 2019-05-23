@@ -4,6 +4,8 @@ import { QuestionJourneyComponent } from './question-journey/question-journey.co
 import { MobileJourneyComponent } from './mobile-journey/mobile-journey.component';
 import { ShipOceanComponent } from './ship-ocean/ship-ocean.component';
 import { FashionChooseComponent } from './fashion-choose/fashion-choose.component';
+import { VaInteractionComponent } from './va-interaction/va-interaction.component';
+
 
 const routes: Routes = [
   {
@@ -21,11 +23,15 @@ const routes: Routes = [
   {
     path: 'fashion-choose',
     component: FashionChooseComponent
+  },
+  {
+    path: 'va',
+    component: VaInteractionComponent
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }

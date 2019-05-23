@@ -1,0 +1,168 @@
+<div class="container">
+  <div class="va__group">
+    <!-- <input type="radio" id="jakarta" name="va">
+      <label for="jakarta"> -->
+    <div class="va__list" id="jakarta">
+      <div class="va__list-header">
+        <div class="title">
+          <span>SEND TO JAKARTA</span>
+        </div>
+      </div>
+
+      <ul class="va__list-group">
+
+        <li>
+          <div class="input_checked">
+            <input type="checkbox" name="jakarta" id="va_1_1" (click)="vaSelected('jakarta')">
+            <label for="va_1_1">Men's Nike Sportswear </label>
+          </div>
+        </li>
+        <li>
+          <div class="input_checked">
+            <input type="checkbox" name="jakarta" id="va_1_2" (click)="vaSelected('jakarta')">
+            <label for="va_1_2">Women's Nike Sportswear </label>
+          </div>
+        </li>
+        <li>
+          <div class="input_checked">
+            <input type="checkbox" name="jakarta" id="va_1_3" (click)="vaSelected('jakarta')">
+            <label for="va_1_3">ADIDAS Sportswear</label>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="va-act">
+        <button> SEND </button>
+      </div>
+    </div>
+    <!-- </label> -->
+  </div>
+
+  <div class="va__group">
+    <!-- <input type="radio" id="bandung" name="va">
+      <label for="bandung"> -->
+    <div class="va__list" id="bandung">
+      <div class="va__list-header">
+        <div class="title">
+          <span>SEND TO BANDUNG</span>
+        </div>
+      </div>
+      <ul class="va__list-group" id="bandung">
+        <li>
+            <div class="input_checked">
+          <input type="checkbox" name="bandung" id="va_2_1" (click)="vaSelected('bandung')">
+          <label for="va_2_1">LEVI'S LONG </label>
+          </div>
+        </li>
+        <li>
+            <div class="input_checked">
+          <input type="checkbox" name="bandung" id="va_2_2" (click)="vaSelected('bandung')">
+          <label for="va_2_2">EDWIN JEANS</label>
+          </div>
+        </li>
+        <li>
+            <div class="input_checked">
+          <input type="checkbox" name="bandung" id="va_2_3" (click)="vaSelected('bandung')">
+          <label for="va_2_3">LOIS JEANS</label>
+          </div>
+        </li>
+      </ul>
+      <div class="va-act">
+        <button> SEND </button>
+      </div>
+    </div>
+    <!-- </label> -->
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<!-- <div class="va__group">
+      <input type="radio" id="va2" name="va">
+      <label for="va2">
+        <div class="va__list">
+          <div class="va__list-header">
+            <div class="title">SEND TO BANDUNG</div>
+          </div>
+          <div class="va__list-group">
+            <div class="va__list-item">
+              <input type="checkbox" id="va_2">
+              <label for="va_2">LEVI'S LONG</label>
+            </div>
+          </div>
+          <div class="va-act">
+              <button> Bayar </button>
+            </div>
+        </div>
+      </label>
+    </div> -->
+
+
+
+
+
+
+
+
+
+<!-- <input type="radio" id="va1" name="va" data-name="va1"> VA1<br>
+<label for="va1">
+  <div class="la">
+    <input type="checkbox" name="va1" (click)="vaSelected('va1')"> Test1
+    <input type="checkbox" name="va1" (click)="vaSelected('va1')"> Test2
+    <input type="checkbox" name="va1" (click)="vaSelected('va1')"> Test3
+  </div>
+</label>
+<br>
+<input type="radio" id="va2" name="va" data-name="va2"> VA2<br>
+<label for="va2">
+  <input type="checkbox" name="va2" (click)="vaSelected('va2')"> Test1
+  <input type="checkbox" name="va2" (click)="vaSelected('va2')"> Test2
+  <input type="checkbox" name="va2" (click)="vaSelected('va2')"> Test3
+</label> -->
+
+<!-- <input type="radio" name="va" data-name="va1" (click)="vaSelected('va1')"> VA1<br>
+<label for="va1">
+  <div id="va1">
+    <input type="checkbox" name="va1"> Test1
+    <input type="checkbox" name="va1"> Test2
+    <input type="checkbox" name="va1"> Test3
+  </div>
+</label>
+<br>
+<input type="radio" id="va2" name="va" (click)="vaSelected('va2')"> VA2<br>
+<label for="va2">
+  <div id="va2">
+  <input type="checkbox" name="va2"> Test1
+  <input type="checkbox" name="va2"> Test2
+  <input type="checkbox" name="va2"> Test3
+  </div>
+</label> -->
+
+
+<!-- <input type="radio" id="a" name="v"> <label for="a">A</label>
+<input type="radio" id="b" name="v"> <label for="b">B</label> -->
+
+<!-- <input type="radio" id="va1" name="va" > VA1
+<label for="va1">
+    <div class="la">
+        <input type="checkbox" name="va1" (click)="vaSelected('va1')"> Test1
+        <input type="checkbox" name="va1" (click)="vaSelected('va1')"> Test2
+        <input type="checkbox" name="va1" (click)="vaSelected('va1')"> Test3
+      </div>
+</label>
+<br>
+<input type="radio" id="va2" name="va" > VA2
+<label for="va2">
+    <div class="la">
+    <input type="checkbox" name="va2" (click)="vaSelected('va2')"> Test1
+    <input type="checkbox" name="va2" (click)="vaSelected('va2')"> Test2
+    <input type="checkbox" name="va2" (click)="vaSelected('va2')"> Test3
+    </div>
+</label> -->
