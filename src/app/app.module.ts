@@ -9,6 +9,7 @@ import { ShipOceanComponent } from './ship-ocean/ship-ocean.component';
 import { FashionChooseComponent } from './fashion-choose/fashion-choose.component';
 import { VaInteractionComponent } from './va-interaction/va-interaction.component';
 import { TouhouCardComponent } from './touhou-card/touhou-card.component';
+import { NarrowAnimationComponent } from './narrow-animation/narrow-animation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TouhouCardComponent } from './touhou-card/touhou-card.component';
     ShipOceanComponent,
     FashionChooseComponent,
     VaInteractionComponent,
-    TouhouCardComponent
+    TouhouCardComponent,
+    NarrowAnimationComponent
   ],
   imports: [
     BrowserModule,
