@@ -8,6 +8,7 @@ import { MobileJourneyComponent } from './mobile-journey/mobile-journey.componen
 import { ShipOceanComponent } from './ship-ocean/ship-ocean.component';
 import { FashionChooseComponent } from './fashion-choose/fashion-choose.component';
 import { VaInteractionComponent } from './va-interaction/va-interaction.component';
+import { TouhouCardComponent } from './touhou-card/touhou-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { VaInteractionComponent } from './va-interaction/va-interaction.componen
     MobileJourneyComponent,
     ShipOceanComponent,
     FashionChooseComponent,
-    VaInteractionComponent
+    VaInteractionComponent,
+    TouhouCardComponent
   ],
   imports: [
     BrowserModule,

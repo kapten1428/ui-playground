@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+:root {
+  --basebackground  : #090e25;
+  --primaryRed      : #da0002;
+}
+
+$primary-red        : #da0002;
+
+html {
+  /* To make use of full height of page*/
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+//   background: var(--basebackground);
+    background: #c7c7c7;
+}
+
+.wrapper {
+  // width: 1080px;
+  //   width: 50%;
+  //   min-height: 500px;
+  margin: 10rem auto;
+  padding: 2rem;
+  // background: #fff;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  //   grid-template-columns: 1fr 1fr;
+  font-family: "Roboto", sans-serif;
+
+  .card {
+    position: relative;
+    height: 300px;
+
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+
+    &__details {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+
+      text-align: center;
+
+      & > * {
+        margin: 10px 0;
+      }
+
+      .price {
+        font-size: 20px;
+      }
+
+      .measure__label {
+        font-size: 14px;
+      }
+
+      button {
+        cursor: pointer;
+        padding: 10px 0;
+        border: none;
+        border-radius: 10px;
+        background: var(--primaryRed);
+        color: white;
+
+        &:hover {
+            background-color: darken($primary-red, 20%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+      }
+    }
+  }
+
+  .credit-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+}

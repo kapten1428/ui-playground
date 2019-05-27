@@ -5,6 +5,7 @@ import { MobileJourneyComponent } from './mobile-journey/mobile-journey.componen
 import { ShipOceanComponent } from './ship-ocean/ship-ocean.component';
 import { FashionChooseComponent } from './fashion-choose/fashion-choose.component';
 import { VaInteractionComponent } from './va-interaction/va-interaction.component';
+import { TouhouCardComponent } from './touhou-card/touhou-card.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'va',
     component: VaInteractionComponent
+  },
+  {
+    path: 'ta',
+    component: TouhouCardComponent
   }
 ];
 

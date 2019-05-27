@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <div class="cards">
+
+    <div class="card">
+      <div class="card__img">
+        <img
+          src="https://images.unsplash.com/photo-1530629013299-6cb10d168419?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&h=300&q=80"
+          alt="unsplash.com/@jazzband">
+      </div>
+      <div class="card__details">
+        <h3 for="tomato">Cozying Room</h3>
+        <div class="price">
+          <span class="price__label">IDR 1500K /</span>
+          <span class="measure__label">night</span>
+        </div>
+        <button>Detail</button>
+      </div>
+      <span class="credit-img">image by: unsplash.com/@jazzband</span>
+    </div>
+
+    <div class="card">
+      <div class="card__img">
+        <img
+          src="https://images.unsplash.com/photo-1507038772120-7fff76f79d79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&h=300&q=80"
+          alt="unsplash.com/@antocave">
+      </div>
+      <div class="card__details">
+        <h3 for="tomato">House sweet</h3>
+        <div class="price">
+          <span class="price__label">IDR 950K /</span>
+          <span class="measure__label">night</span>
+        </div>
+        <button>Detail</button>
+      </div>
+      <span class="credit-img">image by: unsplash.com/@antocave</span>
+    </div>
+
+    <div class="card">
+      <div class="card__img">
+        <img
+          src="https://images.unsplash.com/photo-1531835551805-16d864c8d311?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&h=300&q=80"
+          alt="unsplash.com/@sonniehiles">
+      </div>
+      <div class="card__details">
+        <h3 for="tomato">Sleep Over Spark</h3>
+        <div class="price">
+          <span class="price__label">IDR 250K /</span>
+          <span class="measure__label">night</span>
+        </div>
+        <button>Detail</button>
+      </div>
+      <span class="credit-img">image by: unsplash.com/@sonniehiles</span>
+    </div>
+
+    <div class="card">
+      <div class="card__img">
+        <img
+          src="https://images.unsplash.com/photo-1444201983204-c43cbd584d93?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=300&q=80"
+          alt="unsplash.com/@markusspiske">
+      </div>
+      <div class="card__details">
+        <h3 for="tomato">Hotel Colored Aura</h3>
+        <div class="price">
+          <span class="price__label">IDR 550K /</span>
+          <span class="measure__label">night</span>
+        </div>
+        <button>Detail</button>
+      </div>
+      <span class="credit-img">image by: unsplash.com/@markusspiske</span>
+    </div>
+
+  </div>
+</div>
